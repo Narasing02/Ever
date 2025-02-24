@@ -28,12 +28,11 @@ app.get('/download', async (req, res) => {
         const result = await alldl(url);
         console.log(result); // Debugging: Log the result
 
-        // Send back the result as JSON
+        
         res.json(result);
     } catch (error) {
         console.error('AllDL Error:', error); // Log the error
 
-        // Return a 500 status with a generic error message
         return res.status(500).json({ error: 'Failed to process video' });
     }
 });
