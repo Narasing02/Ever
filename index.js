@@ -11,6 +11,10 @@ app.get('/',(req,res)=>{
     res.send('Hello World');
 })
 
+app.get('/not-found',(req,res)=>{
+    res.send('Hello this apis are not working');
+})
+
 app.get('/download', async (req, res) => {
     const url = req.query.url;
 
